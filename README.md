@@ -10,6 +10,13 @@ The code provided may be easily used as-is or with a limited amount of customiza
 The assumptions made to run the scripts are:
 1) *mpirun* command might generate log file with misaligned rows due to the multiple instances (read below) trying to write at the same time. So one may want to double check if the "log cleaning" phase would need a tweak or not.
 2) There are no easier way to access to all performances/plots, but quering the log files. 
+3) The 3 codes are expecting to see the experiment filename saved following a format with the following fields:
+    test_name=ppn_${PPN}-cps_${CPS}-intra_${INTRAT}-inter_${INTERT}-bt_${BKT}-img_${IMG}-lr_${LR}-mom_${M}-bs_${BS}-dpout_${D0}_${D1}_..._${DN}.log
+    
+    This means:
+      a. Some changes may be required to adapt this code to your format
+      b. The training script is designed to accept all those variables as parameters that can be set as flags before running a new training session
+    
 3) The pipeline of how to use these scripts is the one defined below. Alternatively, some error or bugs might appear
 
 
