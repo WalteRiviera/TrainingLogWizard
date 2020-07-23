@@ -40,7 +40,7 @@ IMG=${IMAGES[$i]}
 						D1=${DROPOUT1[$d1]}
 
 						for d2 in ${!DROPOUTN[@]}; do
-						D2=${DROPOUT2[$dN]}
+						DN=${DROPOUT2[$dN]}
 							test_name=ppn_${PPN}-cps_${CPS}-intra_${INTRAT}-inter_${INTERT}-bt_${BKT}-img_${IMG}-lr_${LR}-mom_${M}-bs_${BS}-dpout_${D0}_${D1}_${D2}_${D3}_${D4}_${D5}_${D6}_${D7}
 							save_path=$base_dir/$test_name
 
